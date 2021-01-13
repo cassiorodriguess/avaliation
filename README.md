@@ -5,7 +5,52 @@
 [![Latest Stable Version](https://img.shields.io/packagist/v/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
 [![License](https://img.shields.io/packagist/l/laravel/framework)](https://packagist.org/packages/laravel/lumen-framework)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+Aplicação com framework Lumen CRUD apis
+
+Para rodar esta aplicação é necessário que tenhas instaldo o composer em sua máquina
+
+Clone a aplicação deste repositório , crie um banco de dados chamado avaliation no
+MYSQL e rode os seguintes comandos:
+
+--> cd avaliation // entre dentro da pasta
+
+--> php artisan migrate // migre a migração de artigo
+
+--> php -S localhost:8000 -t public // rode no servidor local
+
+--> Faça o consumo das APIS
+
+http://localhost:8000/photo via get- Lista todos artigos
+
+http://localhost:8000/photo/id_da_foto via get - Mostra um artigo por id
+
+http://localhost:8000/photo/create via get- Mostra um teste de criação
+
+http://localhost:8000/photo/id_da_foto/edit via get - Mostra um artigo por id para edição
+
+http://localhost:8000/photo via post - Insere um artigo
+
+{   
+ "title":"Teste",
+ "sub_title":"Teste2",
+ "description":"teste2",
+ "slug":"1",
+ "is_active":1   
+}
+
+http://localhost:8000/photo/id_da_foto via put - Atualiza um artigo
+
+{   
+ "title":"Teste",
+ "sub_title":"Teste2",
+ "description":"teste2",
+ "slug":"1",
+ "is_active":1   
+}
+
+http://localhost:8000/photo/id_da_foto via delete - deleta um artigo
+
+Testes unitários na pastas tests
 
 ## Official Documentation
 
